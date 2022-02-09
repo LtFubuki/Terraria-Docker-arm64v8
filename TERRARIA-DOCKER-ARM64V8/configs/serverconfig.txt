@@ -34,7 +34,7 @@ autocreate=3
 seed=
 
 #Sets the name of the world when using autocreate
-worldname=Cam's World
+worldname=Terraria-World
 
 #Sets the difficulty of the world when using autocreate 0(classic), 1(expert), 2(master), 3(journey)
 difficulty=0
