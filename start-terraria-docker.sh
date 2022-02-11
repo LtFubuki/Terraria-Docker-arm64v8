@@ -10,4 +10,4 @@ rm ./${GH_REPO}-${GH_BRANCH}.zip && \
 cd ${GH_REPO}-${GH_BRANCH} && \
 docker build -t ltfubuki/terraria-arm64v8 . && \
 mkdir worlds && \
-docker run -itd -v worlds:/terraria/worlds -v configs:/terraria/configs -p 7777:7777/tcp --name terraria-${SERVER_COUNT} ltfubuki/terraria-arm64v8
+docker run -itd -v worlds:/terraria/worlds -v configs:/terraria/configs -p 7777:7777/tcp --name "terraria-${SERVER_COUNT}" ltfubuki/terraria-arm64v8
