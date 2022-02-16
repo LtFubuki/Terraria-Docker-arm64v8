@@ -15,13 +15,13 @@ RUN mkdir /tmp/terraria && \
     rm -R /tmp/* && \
     rm /terraria/Mono.* && \
     rm /terraria/System.* && \
-    rm /terraria/WindowsBase.dll
-
-RUN chmod +x /terraria/TerrariaServer* && \
-    chmod +x /terraria/run.sh && \
-    if [ ! -f /terraria/TerrariaServer ]; then echo "Missing /terraria/TerrariaServer"; exit 1; fi    
+    rm /terraria/WindowsBase.dll && \
+    chmod +x /terraria/TerrariaServer* && \
+    if [ ! -f /terraria/TerrariaServer ]; then echo "Missing /terraria/TerrariaServer"; exit 1; fi
 
 COPY run-server.sh /terraria/run.sh
+
+RUN chmod +x /terraria/run.sh
 
 WORKDIR /terraria
 CMD ["./run.sh"]
