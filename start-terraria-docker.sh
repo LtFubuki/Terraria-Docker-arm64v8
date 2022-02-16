@@ -11,5 +11,5 @@ unzip ./${GH_REPO}-${GH_BRANCH}.zip && \
 rm ./${GH_REPO}-${GH_BRANCH}.zip && \
 cd ${GH_REPO}-${GH_BRANCH} && \
 docker build -t ltfubuki/terraria-arm64v8 . && \
-mkdir worlds && \
+if [ ! -d worlds ]; then mkdir worlds; fi && \
 docker run -itd -v worlds:/terraria/worlds -v configs:/terraria/configs -p ${SERVER_PORT}:7777/tcp --name ${SERVER_NAME}-${SERVER_COUNT} ltfubuki/terraria-arm64v8
