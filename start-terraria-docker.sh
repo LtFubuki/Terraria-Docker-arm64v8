@@ -3,7 +3,7 @@
 GH_USER=LtFubuki
 GH_REPO=Terraria-Docker-arm64v8
 GH_BRANCH=main
-SERVER_COUNT=$( docker ps | grep ltfubuki-arm64v8 | wc -l )
+SERVER_COUNT=$( docker ps --no-trunc | grep ltfubuki/terraria-arm64v8 | wc -l )
 SERVER_NAME=terraria
 curl -L https://github.com/${GH_USER}/${GH_REPO}/archive/refs/heads/${GH_BRANCH}.zip > ${GH_REPO}-${GH_BRANCH}.zip && \
 unzip ./${GH_REPO}-${GH_BRANCH}.zip && \
