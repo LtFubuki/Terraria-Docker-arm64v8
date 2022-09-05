@@ -9,8 +9,8 @@ RUN apt-get update && \
 
 RUN mkdir /tmp/terraria && \
     cd /tmp/terraria && \
-    wget https://terraria.org/api/download/pc-dedicated-server/terraria-server-1432.zip && \
-    unzip -q terraria-server-1432.zip && \
+    wget https://terraria.org/api/download/pc-dedicated-server/terraria-server-1436.zip && \
+    unzip -q terraria-server-1436.zip && \
     mv */Linux /terraria && \
     rm -R /tmp/* && \
     rm /terraria/Mono.* && \
